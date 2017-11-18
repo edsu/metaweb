@@ -5,7 +5,7 @@ metadata from standard HTML, Twitter Cards and Facebook's Open Graph Protocol.
 
 ## Install
 
-npm install metaweb
+    npm install metaweb
 
 ## Command Line
 
