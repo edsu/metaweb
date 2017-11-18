@@ -1,6 +1,6 @@
 # metaweb
 
-![build-status](https://travis-ci.org/edsu/metaweb.svg?branch=master)
+[![build-status](https://travis-ci.org/edsu/metaweb.svg?branch=master)](https://travis-ci.org/edsu/metaweb)
 
 metaweb will extract metadata from web pages. It attempts to extract common
 metadata from standard HTML, Twitter Cards and Facebook's Open Graph Protocol. 
