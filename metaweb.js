@@ -126,7 +126,7 @@ function extractHtmlMetadata(html, url) {
     if (result.link[rel.value]) {
       result.link[rel.value].push(link.href)
     } else {
-      result.link[rel.value] = [new URL.URL(link.href, url)]
+      result.link[rel.value] = [new URL.URL(link.href, url).href]
     }
   }
 
