@@ -138,14 +138,18 @@ function mergeMetadata(result, source) {
     title: source.title || pick(source.meta, ['og:title', 'twitter:title']),
     description: pick(source.meta, ['description', 'og:description', 'twitter:description']),
     image: pick(source.meta, ['twitter:image', 'og:image']),
-    canonical: pick(source.link, ['canonical'])
+    canonical: pick(source.link, ['canonical']),
+    publisher: pick(source.meta, ['og:site_name']),
+    keywords: pick(source.meta, ['keywords'], split=true)
   }
   return {...result, ...normalized}
 }
 
-function pick(source, names) {
+function pick(source, names, split=false) {
   for (name of names) {
-    if (source[name]) {
+    if (source[name] && split) {
+      return source[name][0].split(/ *, */)
+    } else if (source[name]) {
       return source[name][0]
     }
   }

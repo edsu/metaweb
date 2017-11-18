@@ -2,8 +2,12 @@
 
 [![build-status](https://travis-ci.org/edsu/metaweb.svg?branch=master)](https://travis-ci.org/edsu/metaweb)
 
-metaweb will extract metadata from web pages. It attempts to extract common
-metadata from standard HTML, Twitter Cards and Facebook's Open Graph Protocol. 
+*metaweb* will extract metadata for a web page. Only metadata for the webpage
+itself is extracted, not metadata for items within the page itself. *metaweb*
+attempts to extract common metadata from standard HTML, Twitter Cards and
+Facebook's [Open Graph Protocol](http://opengraphprotocol.org/). It is not meant
+to be perfect, or adhere to any particular overarching standard, but just to be
+useful. If you've got ideas of things to add please an [issue]() with your idea.
 
 ## Install
 
@@ -11,7 +15,7 @@ metadata from standard HTML, Twitter Cards and Facebook's Open Graph Protocol.
 
 ## Command Line
 
-When you install metaweb you will get a command line program:
+When you install *metaweb* you will get a command line program:
 
 ```
 % metaweb http://www.washingtonpost.com/wp-srv/special/politics/prism-collection-documents/
@@ -96,7 +100,7 @@ metaweb http://www.washingtonpost.com/wp-srv/special/politics/prism-collection-d
 
 ## JavaScript
 
-Usually you will probably want to use metaweb as a library in your own 
+Usually you will probably want to use *metaweb* as a library in your own
 JavaScript applications:
 
 ```javascript
