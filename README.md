@@ -28,7 +28,7 @@ Use the `--includeRaw` parameter to include all the ran `meta` and `link`
 content.
 
 ```
-./metaweb.js http://www.washingtonpost.com/wp-srv/special/politics/prism-collection-documents/ --includeRaw
+metaweb.js http://www.washingtonpost.com/wp-srv/special/politics/prism-collection-documents/ --includeRaw
 {
   "url": "http://www.washingtonpost.com/wp-srv/special/politics/prism-collection-documents/",
   "canonical": "http://www.washingtonpost.com/wp-srv/special/politics/prism-collection-documents/",
