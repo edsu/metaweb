@@ -1,7 +1,7 @@
 {
   "name": "metaweb",
   "description": "get metadata for a web page",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "license": "MIT",
   "main": "metaweb",
   "engines": {

@@ -148,9 +148,9 @@ function mergeMetadata(result, source) {
 
 function pick(source, names, split=false) {
   for (name of names) {
-    if (source[name] && split) {
+    if (source[name] && source[name][0] && split) {
       return source[name][0].split(/ *, */)
-    } else if (source[name]) {
+    } else if (source[name] && source[name][0]) {
       return source[name][0]
     }
   }
@@ -160,6 +160,8 @@ function pick(source, names, split=false) {
 function clean(s) {
   if (s) {
     return s.replace(/\n/g, ' ').replace(/ +/g, ' ').trim()
+  } else {
+    return null
   }
 }
 
