@@ -1,0 +1,34 @@
+{
+  "name": "metaweb",
+  "description": "get metadata for a web page",
+  "version": "0.0.1",
+  "license": "MIT",
+  "main": "metaweb",
+  "engines": {
+    "node": ">= 6"
+  },
+  "author": {
+    "name": "Ed Summers",
+    "email": "ehs@pobox.com",
+    "url": "https://inkdroid.org"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/edsu/metaweb"
+  },
+  "dependencies": {
+    "jsdom": "^11.0.0",
+    "minimist": "^1.2.0",
+    "request-promise": "latest"
+  },
+  "devDependencies": {
+    "chai": "latest",
+    "mocha": "latest"
+  },
+  "scripts": {
+    "test": "mocha --colors --reporter spec test.js"
+  },
+  "bin": {
+    "metaweb": "metaweb.js"
+  }
+}
