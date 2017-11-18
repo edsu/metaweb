@@ -109,5 +109,5 @@ If you would like to also get the raw `link` and `meta` content use the
 `includeRaw` parameter:
 
 ```javascript
-metaweb.get(url, includeRaw)
+metaweb.get(url, includeRaw=true)
 ```
