@@ -124,10 +124,12 @@ function extractHtmlMetadata(html, url) {
 
   for (const link of doc.querySelectorAll('head link')) {
     const rel = link.attributes.rel
-    if (result.link[rel.value]) {
-      result.link[rel.value].push(link.href)
-    } else {
-      result.link[rel.value] = [new URL.URL(link.href, url).href]
+    if (rel) {
+      if (result.link[rel.value]) {
+        result.link[rel.value].push(link.href)
+      } else {
+        result.link[rel.value] = [new URL.URL(link.href, url).href]
+      }
     }
   }
 
