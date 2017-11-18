@@ -101,7 +101,7 @@ JavaScript applications:
 metaweb = require('metaweb')
 
 metadata = metaweb.get(url).then((metadata) => {
-	// do something with the metadata
+  // do something with the metadata
 })
 ```
 
