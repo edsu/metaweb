@@ -108,7 +108,8 @@ function extractHtmlMetadata(html, url) {
 
   let doc = dom.window.document
 
-  result.title = clean(doc.querySelector('head title').text)
+  const title = doc.querySelector('head title')
+  result.title = title ? clean(title.text) : ''
 
   for (const meta of doc.querySelectorAll('head meta')) {
     const name = meta.attributes.name || meta.attributes.property
