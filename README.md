@@ -92,7 +92,7 @@ metaweb http://www.washingtonpost.com/wp-srv/special/politics/prism-collection-d
 }
 ```
 
-## From JavaScript
+## JavaScript
 
 Usually you will probably want to use metaweb as a library in your own 
 JavaScript applications:
