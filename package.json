@@ -1,7 +1,7 @@
 {
   "name": "metaweb",
   "description": "get metadata for a web page",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "license": "MIT",
   "main": "metaweb",
   "engines": {
@@ -19,7 +19,8 @@
   "dependencies": {
     "jsdom": "^11.0.0",
     "minimist": "^1.2.0",
-    "request-promise": "latest"
+    "request-promise": "latest",
+    "winston": "^3.0.0-rc1"
   },
   "devDependencies": {
     "chai": "latest",

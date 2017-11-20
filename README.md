@@ -3,11 +3,16 @@
 [![build-status](https://travis-ci.org/edsu/metaweb.svg?branch=master)](https://travis-ci.org/edsu/metaweb)
 
 *metaweb* will extract metadata for a web page. Only metadata for the webpage
-itself is extracted, not metadata for items within the page itself. *metaweb*
-attempts to extract common metadata from standard HTML, Twitter Cards and
-Facebook's [Open Graph Protocol](http://opengraphprotocol.org/). It is not meant
-to be perfect, or adhere to any particular overarching standard, but just to be
-useful. If you've got ideas of things to add please an [issue]() with your idea.
+itself is extracted, not metadata for items within the page. *metaweb* attempts
+to extract common metadata from standard HTML, Twitter Cards and Facebook's
+[Open Graph Protocol](http://opengraphprotocol.org/). It is not meant to be
+perfect, or adhere to any particular overarching standard, but just to scratch a
+particular itch I had at the time. If you've got your own itch to scratch 
+please ad an [issue](https://github.com/edsu/metaweb/issues).
+
+The name metaweb pays homage to one of the more forward looking startups of the
+[same name](https://en.wikipedia.org/wiki/Metaweb), who created one of the first
+community driven entity databases on the web.
 
 ## Install
 

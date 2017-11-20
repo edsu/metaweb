@@ -1,5 +1,18 @@
 const { ok, equal, deepEqual } = require('assert')
 const { get } = require('./metaweb')
+const winston = require('winston')
+
+log = winston.createLogger({
+  level: 'debug',
+  transports: [
+    new (winston.transports.File)({
+      filename: './test.log',
+      prepend: true,
+      level: 'debug'
+    })
+  ]
+})
+
 
 describe('metaweb', function() {
   this.timeout(5000)

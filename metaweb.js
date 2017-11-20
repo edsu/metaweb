@@ -2,9 +2,11 @@
 
 const URL = require('url')
 const jsdom = require('jsdom')
+const winston = require('winston')
 const request = require('request')
 const minimist = require('minimist')
 
+const log = winston.createLogger()
 const jar = request.jar();
 const virtualConsole = new jsdom.VirtualConsole();
 
@@ -102,7 +104,7 @@ function extractHtmlMetadata(html, url) {
   try {
     dom = new jsdom.JSDOM(html, {url: url, virtualConsole})
   } catch (e) {
-    console.error(`jsdom error ${e}`)
+    log.error(`jsdom error ${e}`)
     return result
   }
 
@@ -128,7 +130,11 @@ function extractHtmlMetadata(html, url) {
       if (result.link[rel.value]) {
         result.link[rel.value].push(link.href)
       } else {
-        result.link[rel.value] = [new URL.URL(link.href, url).href]
+        try {
+          result.link[rel.value] = [new URL.URL(link.href, url).href]
+        } catch (e) {
+          log.warn(`ignoring invalid <link> href ${link.href}`, e)
+        } 
       }
     }
   }
@@ -169,14 +175,27 @@ function clean(s) {
 
 async function main() {
   const args = minimist(process.argv.slice(2))
+
+  // configure logging
+  log.configure({
+    level: 'info',
+    transports: [
+      new (winston.transports.File)({
+        filename: './metaweb.log',
+        prepend: true,
+        level: 'info'
+      })
+    ]
+  })
+
   if (args._.length != 1) {
     console.error('usage: metaweb [--includeRaw] <url>')
   } else {
     try {
       const result = await get(args._[0], includeRaw=args.includeRaw)
-      console.log(JSON.stringify(result, null, 2))
+      log.info(JSON.stringify(result, null, 2))
     } catch (error) {
-      console.error(error.message)
+      log.error(error.message)
     }
   }
 }
