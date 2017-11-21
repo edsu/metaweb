@@ -7,8 +7,8 @@ itself is extracted, not metadata for items within the page. *metaweb* attempts
 to extract common metadata from standard HTML, Twitter Cards and Facebook's
 [Open Graph Protocol](http://opengraphprotocol.org/). It is not meant to be
 perfect, or adhere to any particular overarching standard, but just to scratch a
-particular itch I had at the time. If you've got your own itch to scratch 
-please ad an [issue](https://github.com/edsu/metaweb/issues).
+particular itch I had at the time. If you've got your own itch to scratch please
+add an [issue](https://github.com/edsu/metaweb/issues).
 
 The name metaweb pays homage to one of the more forward looking startups of the
 [same name](https://en.wikipedia.org/wiki/Metaweb), who created one of the first
