@@ -193,9 +193,9 @@ async function main() {
   } else {
     try {
       const result = await get(args._[0], includeRaw=args.includeRaw)
-      log.info(JSON.stringify(result, null, 2))
+      console.log(JSON.stringify(result, null, 2))
     } catch (error) {
-      log.error(error.message)
+      console.error(error.message)
     }
   }
 }
