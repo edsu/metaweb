@@ -55,7 +55,7 @@ describe('metaweb', function() {
 
   it('handles t.co', async () => {
     const result = await get('https://t.co/r2mIeyyY7t')
-    equal(result.url, 'http://www.newshub.co.nz/home/election/2017/08/patrick-gower-bill-english-in-shutdown-mode-over-todd-barclay-texts.html')
+    equal(result.url, 'https://www.newshub.co.nz/home/election/2017/08/patrick-gower-bill-english-in-shutdown-mode-over-todd-barclay-texts.html')
     equal(result.status, 200)
   })
   
