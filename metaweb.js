@@ -17,7 +17,10 @@ function get(url, includeRaw=false) {
     jar: jar,
     timeout: 10000,
     strictSSL: false,
-    headers: {"User-Agent": userAgent(url)}
+    headers: {
+      "User-Agent": "ushrtn (https://github.com/edsu/metaweb)",
+      "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8"
+    }
   }
 
   let sent = false
@@ -77,20 +80,6 @@ function get(url, includeRaw=false) {
     }
 
   })
-}
-
-function userAgent(url) {
-
-  // most of the time we pretend to be a browser but some services don't give
-  // browsers a Location header and instead rely on META refresh and
-  // JavaScript to redirect browsers (sigh) when they are told we are not a
-  // browser they give an HTTP redirect, which is nice
-  
-  if (['t.co', 'fw.to'].indexOf(URL.parse(url).hostname) != -1) {
-    return "ushrtn (https://github.com/edsu/metaweb)"
-  } else {
-    return "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_2) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/47.0.2526.106 Safari/537.36"
-  }
 }
 
 function extractHtmlMetadata(html, url) {

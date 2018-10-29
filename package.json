@@ -1,7 +1,7 @@
 {
   "name": "metaweb",
   "description": "get metadata for a web page",
-  "version": "0.0.7",
+  "version": "0.0.8",
   "license": "MIT",
   "main": "metaweb",
   "engines": {
@@ -17,10 +17,10 @@
     "url": "https://github.com/edsu/metaweb"
   },
   "dependencies": {
-    "jsdom": "^11.12.0",
+    "jsdom": "^12.2.0",
     "minimist": "^1.2.0",
     "request-promise": "latest",
-    "winston": "^3.0.0"
+    "winston": "^3.1.0"
   },
   "devDependencies": {
     "chai": "latest",
