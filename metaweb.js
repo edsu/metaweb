@@ -83,7 +83,6 @@ function get(url, includeRaw=false) {
 }
 
 function extractHtmlMetadata(html, url) {
-
   let result = {
     link: {},
     meta: {}
@@ -102,7 +101,7 @@ function extractHtmlMetadata(html, url) {
   const title = doc.querySelector('head title')
   result.title = title ? clean(title.text) : ''
 
-  for (const meta of doc.querySelectorAll('head meta')) {
+  for (const meta of doc.querySelectorAll('meta')) {
     const name = meta.attributes.name || meta.attributes.property
     if (name) {
       if (result.meta[name.value]) {
@@ -112,7 +111,7 @@ function extractHtmlMetadata(html, url) {
       }
     }
   }
-
+  
   for (const link of doc.querySelectorAll('head link')) {
     const rel = link.attributes.rel
     if (rel) {
