@@ -112,7 +112,7 @@ function extractHtmlMetadata(html, url) {
     }
   }
   
-  for (const link of doc.querySelectorAll('head link')) {
+  for (const link of doc.querySelectorAll('link')) {
     const rel = link.attributes.rel
     if (rel) {
       if (result.link[rel.value]) {
