@@ -66,7 +66,7 @@ describe('metaweb', function() {
 
   it('extracts metadata', async () => {
     const result = await get('https://www.youtube.com/watch?v=oHg5SJYRHA0')
-    strictEqual(result.title, "RickRoll'D")
+    strictEqual(result.title, "RickRoll'D - YouTube")
     strictEqual(result.description, "https://www.facebook.com/rickroll548Reddit AMA: https://www.reddit.com/r/IAmA/comments/mx53y/i_am_youtube_user_cotter548_aka_the_inventor_of/As long as troll...")
     strictEqual(result.image, 'https://i.ytimg.com/vi/oHg5SJYRHA0/hqdefault.jpg')
     strictEqual(result.publisher, 'YouTube')
